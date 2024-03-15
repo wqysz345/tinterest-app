@@ -3,6 +3,15 @@ export export interface IAuthor {
     short_url: string;
 }
 
+export default interface IUser {
+    thumbnail: string,
+    name: string,
+    short_url: string
+    followers: int
+    following: int
+    avatar: string
+}
+
 export interface IArticle {
     preview: string;
     title: string;
