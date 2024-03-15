@@ -27,4 +27,10 @@ export const ROUTES = [
         component: lazy(() => import("./pages/Peoples/Peoples.tsx")),
         show_in_nav: true
     },
+    {
+        name: "Интересы", // "Articles"
+        path: "/teams",
+        component: lazy(() => import("./pages/Teams/Teams.tsx")),
+        show_in_nav: true
+    },
 ]

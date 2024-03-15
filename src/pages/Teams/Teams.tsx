@@ -3,23 +3,21 @@ import {LeftAsideOrganism} from "../../components/organisms/Aside/LeftAside";
 import {RightAsideOrganism} from "../../components/organisms/Aside/RightAside";
 
 import {faker} from "@faker-js/faker";
-import {IUser} from "../../types";
-import {PeopleCard} from "../../components/organisms/PeopleCard";
+import {ITeam} from "../../types";
+import {TeamCard} from "../../components/organisms/TeamCard";
 
-export default function Peoples() {
+export default function Teams() {
 
-    const peoples: IUser[] = [];
+    const teams: ITeam[] = [];
 
     for (let i = 0; i < 10; i++) {
-        const user: IUser = {
-            thumbnail: faker.image.url(),
-            name: faker.person.firstName() + ' ' + faker.person.lastName(),
-            short_url: '@' + faker.person.firstName().toLowerCase(),
-            followers: faker.number.int(100),
-            following: faker.number.int(100),
-            avatar: faker.image.avatar()
+        const team: ITeam = {
+            name: faker.company.name(),
+            description: faker.lorem.sentence(30),
+            members: faker.number.int(100)
         }
-        peoples.push(user);
+
+        teams.push(team);
     }
 
     return (
@@ -32,8 +30,8 @@ export default function Peoples() {
                 </div>
                 <div className="col-span-6 max-w-xl place-self-center flex flex-col space-y-5">
                     <div className="w-full flex flex-col space-y-8">
-                        {peoples.map((user, index) => (
-                            <PeopleCard key={index} user={user}/>
+                        {teams.map((team, index) => (
+                            <TeamCard key={index} team={team}/>
                         ))}
                     </div>
                 </div>

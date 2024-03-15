@@ -1,4 +1,4 @@
-import IUser from "../../../types";
+import {IUser} from "../../../types";
 import {AnimatePresence, motion} from "framer-motion";
 import {Typography} from "../../atoms/Typography";
 import {IconButton} from "../../atoms/Buttons/IconButton";
