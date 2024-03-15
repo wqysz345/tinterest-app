@@ -1,0 +1,4 @@
+.button {
+  @apply align-middle select-none font-bold text-center uppercase transition-all disabled:opacity-50
+  disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-2 rounded-md bg-slate-800 text-white shadow-md shadow-slate-800/10 hover:shadow-lg hover:shadow-slate-800/20 focus:opacity-[.85] focus:shadow-none active:opacity-[.85];
+}
