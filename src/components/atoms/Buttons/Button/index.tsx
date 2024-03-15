@@ -7,7 +7,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     className?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ className, children }, ...props) => {
+export const Button: React.FC<ButtonProps> = ({ className, children , ...props}) => {
     return (
         <button {...props} className={cn(className, styles.button)}>
             {children}

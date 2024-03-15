@@ -6,5 +6,13 @@ export const ROUTES = [
     {
         path: "/",
         component: lazy(() => import("./pages/Home/Home.tsx")),
-    }
+    },
+    {
+        path: "/login",
+        component: lazy(() => import("./pages/Login/Login.tsx")),
+    },
+    {
+        path: "/register",
+        component: lazy(() => import("./pages/Register/Register.tsx")),
+    },
 ]
